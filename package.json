@@ -2,6 +2,9 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "husky": "^7.0.2",
     "lerna": "^3.22.1"
   },
   "workspaces": [

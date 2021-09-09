@@ -13,6 +13,11 @@
   ],
   "scripts": {
     "install": "lerna bootstrap",
-    "start:web": "cd ./applications/holdemWeb && yarn start"
+    "start:web": "concurrently 'cd ./packages/holdem && npx webpack' 'cd ./applications/holdemWeb && yarn start'"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

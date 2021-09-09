@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "concurrently": "^5.3.0"
   },
   "workspaces": [
     "packages/*",
@@ -10,6 +11,6 @@
   ],
   "scripts": {
     "install": "lerna bootstrap",
-    "start:web": "cd ./applications/holdemWeb && yarn start"
+    "start:web": "concurrently 'cd ./packages/holdem && npx webpack' 'cd ./applications/holdemWeb && yarn start'"
   }
 }

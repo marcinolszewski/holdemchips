@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Holdem } from "holdem";
+import { App } from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Holdem />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import { Holdem } from "holdem";
 
-function App() {
+export const App: React.FC = () => {
   return (
-    <div>Holdem Chips</div>
+    <div>
+      <Holdem />
+    </div>
   );
-}
-
-export default App;
+};

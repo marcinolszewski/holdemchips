@@ -7,11 +7,13 @@ module.exports = {
     {
       react: {
         root: "React",
-        amd: "react",
+        commonjs: "react",
+        commonjs2: "react",
       },
       "react-dom": {
         root: "ReactDOM",
-        amd: "react-dom",
+        commonjs: "react-dom",
+        commonjs2: "react-dom",
       },
     },
   ],
@@ -67,6 +69,6 @@ module.exports = {
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "lib"),
-    libraryTarget: "amd",
+    libraryTarget: "umd",
   },
 };

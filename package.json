@@ -1,13 +1,13 @@
 {
   "name": "root",
   "private": true,
+  
   "devDependencies": {
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "@types/redux-mock-store": "^1.0.2",
@@ -48,11 +48,14 @@
     "start:web": "concurrently 'cd ./packages/holdem && npx webpack' 'cd ./applications/holdemWeb && yarn start'",
     "start:native": "cd ./applications/holdemNative && yarn start",
     "rmmodules": "find . -name 'node_modules' -type d -exec rm -rf '{}' +",
-    "test": "jest"
+    "test": "jest",
+    "eslint": "eslint . --ext .js,.ts,.tsx",
+    "eslint:fix": "eslint . --ext .js,.ts,.tsx --fix"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn eslint"
     }
   },
   "dependencies": {
@@ -61,6 +64,7 @@
     "expo-status-bar": "^1.0.4",
     "expo-yarn-workspaces": "^1.5.2",
     "jest-canvas-mock": "^2.3.1",
-    "react-native": "^0.65.1"
+    "react-native": "^0.65.1",
+    "@testing-library/jest-dom": "^5.14.1"
   }
 }

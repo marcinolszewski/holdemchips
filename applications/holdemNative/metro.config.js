@@ -1,14 +1,14 @@
-const path = require("path");
+const path = require('path');
 
-const reactNativePath = require.resolve("react-native");
+const reactNativePath = require.resolve('react-native');
 const reactNativeFolder = `${
-  reactNativePath.split("node_modules/react-native/")[0]
+  reactNativePath.split('node_modules/react-native/')[0]
 }node_modules/react-native/`;
 
 const getConfig = async () => ({
-  watchFolders: [path.resolve(__dirname, "../../")],
+  watchFolders: [path.resolve(__dirname, '../../')],
   transformer: {
-    publicPath: "/assets/dark/magic",
+    publicPath: '/assets/dark/magic',
     getTransformOptions: async () => ({
       transform: { experimentalImportSupport: false, inlineRequires: false },
     }),
@@ -16,9 +16,9 @@ const getConfig = async () => ({
   resolver: {
     blacklistRE: new RegExp(
       `^((?!${reactNativeFolder.replace(
-        "/",
-        "\\/"
-      )}).)*\\/node_modules\\/react-native\\/.*$`
+        '/',
+        '\\/',
+      )}).)*\\/node_modules\\/react-native\\/.*$`,
     ),
   },
   // server: {

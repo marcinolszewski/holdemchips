@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const Holdem: React.FC = () => {
-  return <div>Dziala czy nie dziala</div>;
-};
+const Holdem: React.FC = () => <div>Dziala czy nie dziala</div>;
 
 export { Holdem };

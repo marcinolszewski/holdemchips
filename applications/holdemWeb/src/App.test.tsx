@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { App } from './App';
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/You can check the holdem down below/i);
+  render(<App text="Only for test purposes" />);
+  const linkElement = screen.getByText(/Only for test purposes/i);
   expect(linkElement).toBeInTheDocument();
 });

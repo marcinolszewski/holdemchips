@@ -4,7 +4,7 @@ import { App } from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App text="You can check the app below" />
   </React.StrictMode>,
   document.getElementById('root'),
 );

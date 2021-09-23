@@ -8,7 +8,9 @@ module.exports = {
   root: true,
   settings: {
     'import/resolver': {
-      typescript: {},
+      node: {
+        extensions: ['.js'],
+      },
     },
   },
   extends: ['plugin:react/recommended', 'airbnb', 'airbnb/hooks'],
@@ -20,7 +22,23 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: [
+        'airbnb-typescript',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      ],
+      parserOptions: {
+        project: ['./tsconfig.eslint.json'],
+      },
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': ['error'],
+      },
+    },
+  ],
+  plugins: ['react'],
   rules: {
     'no-console': 'error',
     'react/jsx-filename-extension': [

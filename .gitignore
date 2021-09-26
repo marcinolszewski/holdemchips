@@ -11,6 +11,8 @@ lib/
 
 # production
 /build
+/applications/holdemWeb/build
+/.firebase
 
 # misc
 .DS_Store

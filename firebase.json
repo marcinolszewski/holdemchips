@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "applications/holdemWeb/build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

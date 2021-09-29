@@ -52,7 +52,8 @@
     "rmmodules": "find . -name 'node_modules' -type d -exec rm -rf '{}' +",
     "test": "jest",
     "eslint": "eslint . --ext .js,.ts,.tsx",
-    "eslint:fix": "eslint . --ext .js,.ts,.tsx --fix"
+    "eslint:fix": "eslint . --ext .js,.ts,.tsx --fix",
+    "build:packages": "lerna run webpack"
   },
   "husky": {
     "hooks": {

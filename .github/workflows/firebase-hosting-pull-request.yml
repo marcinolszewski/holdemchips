@@ -12,6 +12,5 @@ jobs:
       - run: yarn build:web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HOLDEM_CHIPS_DEC26 }}'
           projectId: holdem-chips-dec26

@@ -48,7 +48,7 @@
     "install": "lerna bootstrap",
     "start:web": "concurrently 'cd ./packages/holdem && npx webpack' 'cd ./applications/holdemWeb && yarn start'",
     "start:native": "cd ./applications/holdemNative && yarn start",
-    "build:web": "yarn install && cd ./packages/holdem && npx webpack --no-watch && cd ../../applications/holdemWeb && yarn build && cd ../../ && firebase deploy",
+    "build:web": "yarn install && cd ./packages/holdem && npx webpack --no-watch && cd ../../applications/holdemWeb && yarn build",
     "rmmodules": "find . -name 'node_modules' -type d -exec rm -rf '{}' +",
     "test": "jest",
     "eslint": "eslint . --ext .js,.ts,.tsx",

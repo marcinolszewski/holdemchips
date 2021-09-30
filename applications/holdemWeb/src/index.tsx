@@ -4,7 +4,7 @@ import { App } from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App text="This should be deployed on master only" />
+    <App text="Funky monke" />
   </React.StrictMode>,
   document.getElementById('root'),
 );
